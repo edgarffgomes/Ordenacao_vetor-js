@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Javascript</title>
+		
+		
+		
+	</head>
+	<body>
+
+		<input size= "40" id="entrada" placeholder="insira um objeto com a primeira letra maiúscula">
+		<button onclick="add()">Adicionar</button>
+		<button onclick="order()">Ordenar</button>
+		
+
+		<script>
+			
+				
+			
+
+			var objetos = Array('Cadeira', 'Impressora', 'Garfo')
+			console.log(objetos)
+
+			function add (){
+				var insercao = document.getElementById('entrada').value
+				if(objetos.indexOf(insercao) !== -1){
+					//emite mensagem por meio do console log
+					console.log('O valor já está contido no vetor')
+				}
+				else{
+					//insere elemento no fim, exibe vetor no console log e limpa caixa de input.
+					objetos.push(insercao)
+					console.log(objetos)
+					document.getElementById('entrada').value = ""
+				}
+			}
+
+			function order(){
+				//orderna elementos e exibe vetor no console log
+				objetos.sort()
+				console.log(objetos)
+			}
+			
+			
+
+			
+		</script>
+	</body>
+</html>
